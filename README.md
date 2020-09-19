@@ -2,8 +2,13 @@
 
 <h2>This program helps you to parse ini files.</h2>
 
-It has couple parametrs, such as: 
-"-p" –– path to the ini file,
-"-s" –– section, you want to get info from,
-"-o" –– option in the section and 
-"-t" –– type of value.
+<p>It has couple parametrs, such as: <br>
+"-p" –– absolute path to the ini file,<br>
+"-s" –– section, you want to get info from,<br>
+"-o" –– option in the section and <br>
+"-t" –– type of value.</p>
+
+<h3>Example of the input:</h3>
+<code>python INI_pars.py -p '/usr/user_name/exp.ini' -s 'DEFAULT' -o 'ServerAliveInterval' -t 'int'</code>
+<h3Expecting output</h3>
+**45**
