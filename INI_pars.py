@@ -32,11 +32,15 @@ class INI_parser:
                     
                     #finding section name
                     res = re.split(r'[;]', el, maxsplit=1)[0]  
-                    sect_name_tmp = re.findall(r'\[([\s\S]+?)\]', res)
+                    sect_name_tmp = re.findall(r'\[([A-Za-z0-9_]+)\]', res)
 
                     if sect_name_tmp:
                         sect_name = sect_name_tmp
                     elif res:
+
+                        if sect_name == '' and res != '':
+                            print(res)
+                            raise Exception()
 
                         #separating option and value
                         option_n, value = re.split(r'=', res, maxsplit=1)
@@ -59,6 +63,8 @@ class INI_parser:
             
         except IOError:
             print("File that you are trying to find doesn't exist")
+        except Exception:
+            print("File that you are trying to read has wrong structure.")
         
 
     def Get_Val(self, sect_name, opt_name, dtype):
@@ -96,3 +102,7 @@ ini_pars = INI_parser(args.path_for_ini_file)
 ini_pars.Read_INI()
 val = ini_pars.Get_Val(args.section, args.option, args.type)
 print(val)
+
+
+# regular expression for section parsing
+# otion out of section
