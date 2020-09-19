@@ -10,5 +10,5 @@
 
 <h3>Example of the input:</h3>
 <code>python INI_pars.py -p '/usr/user_name/exp.ini' -s 'DEFAULT' -o 'ServerAliveInterval' -t 'int'</code>
-<h3Expecting output</h3>
+<h3>Expecting output</h3>
 **45**
