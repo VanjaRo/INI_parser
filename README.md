@@ -6,7 +6,7 @@
 "-p" –– absolute path to the ini file,<br>
 "-s" –– section, you want to get info from,<br>
 "-o" –– option in the section and <br>
-"-t" –– type of value.</p>
+"-t" –– type of value you are expecting to get.</p>
 
 <h3>Example of the input:</h3>
 <code>python INI_pars.py -p '/usr/user_name/exp.ini' -s 'DEFAULT' -o 'ServerAliveInterval' -t 'int'</code>
